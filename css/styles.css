@@ -1,0 +1,13 @@
+/* General */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(#dff2f4, #20e2ee);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
