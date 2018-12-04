@@ -1,28 +1,21 @@
 // Searchbar
-
+// Search by
 $('.search').keyup(function(event) {
+  // creating a new Regular Expression instance, to match text with the search letters
   const searchVal = new RegExp($.map($(this).val().trim().split(' '), function(value) {
     return '(?=.*?' + value + ')';
   }).join(''), 'i');
+  // remove the data-fancybox attribute from images
+  // filter and return the text which matches with the search value
   $('img').parent().parent().hide().removeAttr("data-fancybox").filter(function(){
     return searchVal.exec($(this).text());
+    // show only images which matches the search value and add the caption attribute
   }).show().attr("data-fancybox", "images");
 });
 
 const $figcaption = $('figcaption');
-// const $title = $('img');
-// const $card = $('.card');
 const $anchors = $('a');
-
-// const $allText = [];
-// const $allTitles = [];
 const $allCaptions = [];
-// const $allCards = [];
-
-// $title.each(function(){
-//   const $title = $(this).attr('alt');
-//   $allTitles.push({title: $title});
-// });
 
 $figcaption.each(function() {
   const $caption = $(this).text();
