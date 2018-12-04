@@ -10,13 +10,19 @@ $('.search').keyup(function(event) {
 });
 
 const $figcaption = $('figcaption');
+// const $title = $('img');
+// const $card = $('.card');
 const $anchors = $('a');
-const $allCaptions = [];
 
-$title.each(function(){
-  const $title = $(this).attr('alt');
-  $allTitles.push({title: $title});
-});
+// const $allText = [];
+// const $allTitles = [];
+const $allCaptions = [];
+// const $allCards = [];
+
+// $title.each(function(){
+//   const $title = $(this).attr('alt');
+//   $allTitles.push({title: $title});
+// });
 
 $figcaption.each(function() {
   const $caption = $(this).text();
