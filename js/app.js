@@ -1,5 +1,4 @@
 // Searchbar
-// Search by
 $('.search').keyup(function(event) {
   // creating a new Regular Expression instance, to match text with the search letters
   const searchVal = new RegExp($.map($(this).val().trim().split(' '), function(value) {
