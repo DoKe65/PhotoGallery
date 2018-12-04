@@ -10,14 +10,8 @@ $('.search').keyup(function(event) {
 });
 
 const $figcaption = $('figcaption');
-const $title = $('img');
-const $card = $('.card');
 const $anchors = $('a');
-
-const $allText = [];
-const $allTitles = [];
 const $allCaptions = [];
-const $allCards = [];
 
 $title.each(function(){
   const $title = $(this).attr('alt');
@@ -28,7 +22,6 @@ $figcaption.each(function() {
   const $caption = $(this).text();
   $allCaptions.push({caption: $caption});
 });
-// console.log($allTitles);
 
 for (let i = 0; i < 12; i++) {
   $($anchors[i]).attr('data-caption', $allCaptions[i].caption);
